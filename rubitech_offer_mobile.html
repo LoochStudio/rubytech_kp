@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коммерческое предложение: Рубитех x Луч</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .manrope { font-family: 'Manrope', sans-serif; }
+        
+        /* Custom scrollbar for table */
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #F8F7F5;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #DDD5EC;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #29272F;
+        }
+        
+        /* Details animation */
+        .detail-row {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .glass-hover {
+            transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+        }
+        .glass-hover:hover {
+            box-shadow: 0 10px 40px -10px rgba(41,39,47,0.08);
+            border-color: rgba(41,39,47,0.2);
+        }
+
+        /* GPU-friendly fluffy radial-gradient glow (no heavy CSS filter: blur) */
+        .cursor-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 9999px;
+            pointer-events: none;
+            will-change: transform, opacity;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+
+        .glow-blue {
+            background: radial-gradient(circle, rgba(217, 233, 247, 1) 0%, rgba(217, 233, 247, 0.55) 42%, rgba(217, 233, 247, 0) 72%);
+        }
+        .glow-peach {
+            background: radial-gradient(circle, rgba(248, 223, 197, 1) 0%, rgba(248, 223, 197, 0.55) 42%, rgba(248, 223, 197, 0) 72%);
+        }
+        .glow-pistachio {
+            background: radial-gradient(circle, rgba(224, 236, 216, 1) 0%, rgba(224, 236, 216, 0.55) 42%, rgba(224, 236, 216, 0) 72%);
+        }
+        .glow-lavender {
+            background: radial-gradient(circle, rgba(221, 213, 236, 1) 0%, rgba(221, 213, 236, 0.55) 42%, rgba(221, 213, 236, 0) 72%);
+        }
+    </style>
+</head>
+<body class="bg-[#F8F7F5] text-[#29272F] antialiased selection:bg-[#DDD5EC] selection:text-[#29272F]">
+    
+    <div class="max-w-[1200px] mx-auto px-4 md:px-6 py-10 md:py-24 space-y-20 md:space-y-32 overflow-hidden">
+        
+        <!-- Блок 1. Главный экран (Hero) -->
+        <section class="relative pt-4">
+            <div class="inline-block bg-[#E0ECD8] text-[#29272F] px-4 md:px-5 py-2 rounded-full text-[13px] md:text-[14px] font-medium mb-6 md:mb-8 border border-[#29272F]/10 hover:shadow-md transition-shadow duration-300">
+                Коммерческое предложение от студии Луч
+            </div>
+            <h1 class="manrope text-4xl sm:text-5xl md:text-6xl lg:text-[76px] tracking-tight leading-[1.05] mb-6 md:mb-8 max-w-4xl">
+                Дизайн корпоративного сайта «Рубитех»
+            </h1>
+            <p class="text-[16px] md:text-[20px] text-[#5F5D63] max-w-2xl leading-relaxed mb-8 md:mb-10">
+                Проектирование и дизайн продукта. Работаем поверх вашей новой айдентики, собираем 38 страниц интерфейса и подготавливаем handoff для инхаус-разработки.
+            </p>
+            <a href="#estimate" class="inline-flex items-center justify-center w-full sm:w-auto gap-2 bg-[#29272F] text-white px-8 py-4 rounded-full text-[16px] font-medium hover:bg-[#45424B] hover:scale-[1.02] sm:hover:scale-105 hover:shadow-lg transition-all duration-300 group">
+                Посмотреть смету
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-y-0.5 transition-transform"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+            </a>
+        </section>
+
+        <!-- Блок 2. Понимание задачи (Context) -->
+        <section>
+            <h2 class="manrope text-3xl md:text-4xl tracking-tight mb-8 md:mb-10">Вводные данные и цели</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div class="bg-white rounded-3xl p-6 md:p-8 border border-[#29272F]/10 flex flex-col relative overflow-hidden glass-hover cursor-glow-card" data-rest-opacity="0.7" data-hover-opacity="1">
+                    <div class="cursor-glow glow-blue w-64 h-64 opacity-70"></div>
+                    <h3 class="manrope text-2xl font-medium mb-3 md:mb-4 relative z-10">Аудитория</h3>
+                    <p class="text-[#5F5D63] text-[15px] md:text-[16px] leading-relaxed relative z-10">B2B-клиенты, системные интеграторы, партнеры и ИТ-специалисты. Удобная навигация для решения корпоративных задач.</p>
+                </div>
+                <div class="bg-white rounded-3xl p-6 md:p-8 border border-[#29272F]/10 flex flex-col relative overflow-hidden glass-hover cursor-glow-card" data-rest-opacity="0.7" data-hover-opacity="1">
+                    <div class="cursor-glow glow-peach w-64 h-64 opacity-70"></div>
+                    <h3 class="manrope text-2xl font-medium mb-3 md:mb-4 relative z-10">Бизнес-цель</h3>
+                    <p class="text-[#5F5D63] text-[15px] md:text-[16px] leading-relaxed relative z-10">Структурировать порядка 150 блоков на 38 страницах. Эффективно презентовать витрину экосистемы продуктов и упростить путь к заказу оборудования.</p>
+                </div>
+                <div class="bg-white rounded-3xl p-6 md:p-8 border border-[#29272F]/10 flex flex-col relative overflow-hidden glass-hover cursor-glow-card" data-rest-opacity="0.7" data-hover-opacity="1">
+                    <div class="cursor-glow glow-pistachio w-64 h-64 opacity-70"></div>
+                    <h3 class="manrope text-2xl font-medium mb-3 md:mb-4 relative z-10">Видение бренда</h3>
+                    <p class="text-[#5F5D63] text-[15px] md:text-[16px] leading-relaxed relative z-10">Технологично, чисто, много воздуха. Внедряем строгую модульную сетку, 3D-рендеры и живые градиенты на базе вашей новой айдентики.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 3. Этапы работ подробно (Roadmap) -->
+        <section>
+            <h2 class="manrope text-3xl md:text-4xl tracking-tight mb-8 md:mb-10">Как мы будем решать задачу</h2>
+            <div class="space-y-4">
+                <div class="bg-white rounded-3xl p-5 md:p-8 border border-[#29272F]/10 flex gap-4 md:gap-6 glass-hover group relative overflow-hidden cursor-glow-card" data-rest-opacity="0.45" data-hover-opacity="0.85">
+                    <div class="cursor-glow glow-lavender w-72 h-72 opacity-45"></div>
+                    <div class="shrink-0 pt-1 relative z-10">
+                        <span class="w-8 h-8 md:w-10 md:h-10 bg-[#DDD5EC] text-[#29272F] rounded-full flex items-center justify-center text-[15px] md:text-[16px] font-medium manrope group-hover:scale-110 transition-transform duration-300">1</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h4 class="manrope text-lg md:text-xl font-medium mb-2 group-hover:text-[#45424B] transition-colors">Исследование и UX-проектирование</h4>
+                        <p class="text-[#5F5D63] text-[14px] md:text-[16px] leading-relaxed mb-4">Аудит 38 страниц. Разрабатываем сценарии B2B-заказчиков и партнеров, собираем интерактивные вайрфреймы ключевых шаблонов (продуктовая, отрасль, семейство).</p>
+                        <div class="text-[13px] md:text-[14px] text-[#29272F] bg-[#F8F7F5]/90 px-3 py-1.5 md:px-4 md:py-2 rounded-xl inline-block border border-[#29272F]/5 group-hover:bg-white/90 transition-colors duration-300">
+                            <span class="font-medium">Артефакт:</span> UX-прототипы, спецификации.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-5 md:p-8 border border-[#29272F]/10 flex gap-4 md:gap-6 glass-hover group relative overflow-hidden cursor-glow-card" data-rest-opacity="0.45" data-hover-opacity="0.85">
+                    <div class="cursor-glow glow-pistachio w-72 h-72 opacity-45"></div>
+                    <div class="shrink-0 pt-1 relative z-10">
+                        <span class="w-8 h-8 md:w-10 md:h-10 bg-[#E0ECD8] text-[#29272F] rounded-full flex items-center justify-center text-[15px] md:text-[16px] font-medium manrope group-hover:scale-110 transition-transform duration-300">2</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h4 class="manrope text-lg md:text-xl font-medium mb-2 group-hover:text-[#45424B] transition-colors">Дизайн-концепция</h4>
+                        <p class="text-[#5F5D63] text-[14px] md:text-[16px] leading-relaxed mb-4">Берем ваш новый фирменный стиль и переносим его в веб-интерфейс. Отрисовываем Главную и шаблон продуктовой страницы, закладываем стилистику (градиенты, многослойность).</p>
+                        <div class="text-[13px] md:text-[14px] text-[#29272F] bg-[#F8F7F5]/90 px-3 py-1.5 md:px-4 md:py-2 rounded-xl inline-block border border-[#29272F]/5 group-hover:bg-white/90 transition-colors duration-300">
+                            <span class="font-medium">Артефакт:</span> Утвержденные макеты концепции.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-5 md:p-8 border border-[#29272F]/10 flex gap-4 md:gap-6 glass-hover group relative overflow-hidden cursor-glow-card" data-rest-opacity="0.45" data-hover-opacity="0.85">
+                    <div class="cursor-glow glow-peach w-72 h-72 opacity-45"></div>
+                    <div class="shrink-0 pt-1 relative z-10">
+                        <span class="w-8 h-8 md:w-10 md:h-10 bg-[#F8DFC5] text-[#29272F] rounded-full flex items-center justify-center text-[15px] md:text-[16px] font-medium manrope group-hover:scale-110 transition-transform duration-300">3</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h4 class="manrope text-lg md:text-xl font-medium mb-2 group-hover:text-[#45424B] transition-colors">UI-дизайн (Масштабирование)</h4>
+                        <p class="text-[#5F5D63] text-[14px] md:text-[16px] leading-relaxed mb-4">Отрисовываем все 3 шаблона (33 стр.), уникальные разделы (Партнерам, ИИ, Полигон, Карьера) и сервисные страницы. Адаптируем интерфейс под 3 брейкпоинта.</p>
+                        <div class="text-[13px] md:text-[14px] text-[#29272F] bg-[#F8F7F5]/90 px-3 py-1.5 md:px-4 md:py-2 rounded-xl inline-block border border-[#29272F]/5 group-hover:bg-white/90 transition-colors duration-300">
+                            <span class="font-medium">Артефакт:</span> 150+ блоков в адаптивах.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-5 md:p-8 border border-[#29272F]/10 flex gap-4 md:gap-6 glass-hover group relative overflow-hidden cursor-glow-card" data-rest-opacity="0.45" data-hover-opacity="0.85">
+                    <div class="cursor-glow glow-blue w-72 h-72 opacity-45"></div>
+                    <div class="shrink-0 pt-1 relative z-10">
+                        <span class="w-8 h-8 md:w-10 md:h-10 bg-[#D9E9F7] text-[#29272F] rounded-full flex items-center justify-center text-[15px] md:text-[16px] font-medium manrope group-hover:scale-110 transition-transform duration-300">4</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h4 class="manrope text-lg md:text-xl font-medium mb-2 group-hover:text-[#45424B] transition-colors">Передача в разработку (Setup & Handoff)</h4>
+                        <p class="text-[#5F5D63] text-[14px] md:text-[16px] leading-relaxed mb-4">Собираем структурированный UI-кит, описываем состояния элементов и готовим спецификации анимаций (параллакс, WebGL) для вашей инхаус-команды.</p>
+                        <div class="text-[13px] md:text-[14px] text-[#29272F] bg-[#F8F7F5]/90 px-3 py-1.5 md:px-4 md:py-2 rounded-xl inline-block border border-[#29272F]/5 group-hover:bg-white/90 transition-colors duration-300">
+                            <span class="font-medium">Артефакт:</span> Figma-файл, UI-kit, гайд по анимации.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 4. Прозрачная смета и оценка (Estimate Table) -->
+        <section id="estimate" class="scroll-mt-12">
+            <h2 class="manrope text-3xl md:text-4xl tracking-tight mb-6">Оценка сроков и стоимости</h2>
+            
+            <!-- Highly Visible Mobile Summary Block -->
+            <div class="bg-[#F8DFC5]/30 border border-[#F8DFC5] rounded-3xl p-6 md:p-8 mb-8 max-w-4xl relative overflow-hidden group flex flex-col md:flex-row gap-6 md:items-center">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
+                
+                <div class="shrink-0 relative z-10">
+                    <div class="text-[12px] md:text-[13px] text-[#5F5D63] font-medium uppercase tracking-wider mb-2">Итоговая стоимость</div>
+                    <div class="manrope text-4xl md:text-5xl font-medium text-[#29272F] whitespace-nowrap">1 407 000 ₽</div>
+                    <div class="text-[13px] text-[#5F5D63] mt-2">включая НДС 5%</div>
+                </div>
+                
+                <div class="w-full h-px md:w-px md:h-20 bg-[#29272F]/10 relative z-10 shrink-0"></div>
+                
+                <p class="text-[14px] md:text-[15px] text-[#29272F] leading-relaxed relative z-10">
+                    Итоговая стоимость проекта зависит от финального объема уникальных информационных страниц: если мы сможем собрать сервисные разделы («О компании», «Закупки» и др.) на базе единого текстового шаблона — мы уложимся в эту сумму. Ниже представлен расчет базового объема (38 страниц).
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-3xl border border-[#29272F]/10 overflow-hidden mb-8 shadow-[0_8px_30px_rgba(41,39,47,0.02)] hover:shadow-[0_8px_30px_rgba(41,39,47,0.06)] transition-shadow duration-500">
+                <div class="overflow-x-auto custom-scrollbar">
+                    <table class="w-full text-left border-collapse min-w-[700px]">
+                        <thead>
+                            <tr class="text-[13px] text-[#5F5D63] font-medium tracking-wider uppercase bg-[#F3F2F0]">
+                                <th class="p-4 md:p-6 border-b border-[#29272F]/10 whitespace-nowrap">Этап</th>
+                                <th class="p-4 md:p-6 border-b border-[#29272F]/10">Дизайнер</th>
+                                <th class="p-4 md:p-6 border-b border-[#29272F]/10">Арт-дир</th>
+                                <th class="p-4 md:p-6 border-b border-[#29272F]/10">ПМ</th>
+                                <th class="p-4 md:p-6 border-b border-[#29272F]/10 text-right">Стоимость</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-[14px] md:text-[15px] manrope">
+                            
+                            <!-- Step 1 -->
+                            <tr class="hover:bg-[#F8F7F5] transition-colors cursor-pointer group" onclick="toggleRow('step1')">
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5 font-medium text-[#29272F] flex items-center gap-3">
+                                    <span class="w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#F8F7F5] group-hover:bg-[#DDD5EC] flex items-center justify-center transition-colors duration-300 border border-[#29272F]/5 shrink-0">
+                                        <svg id="icon-step1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300 text-[#5F5D63] group-hover:text-[#29272F]"><path d="M6 9l6 6 6-6"/></svg>
+                                    </span>
+                                    Исследование и Аудит
+                                </td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5">16 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5">8 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5">16 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5 text-right whitespace-nowrap">148 000 ₽</td>
+                            </tr>
+                            <tr id="detail-step1" class="hidden detail-row">
+                                <td colspan="5" class="px-4 md:px-6 pb-6 pt-2 border-b border-[#29272F]/10 bg-white">
+                                    <div class="flex gap-4">
+                                        <div class="w-1 bg-[#DDD5EC] rounded-full shrink-0"></div>
+                                        <div class="text-[13px] md:text-[14px] text-[#5F5D63] leading-relaxed">
+                                            <strong class="text-[#29272F] font-medium">Что входит в этап:</strong> Анализ текущих материалов (38 страниц, ~150 блоков). Сбор требований и ограничений платформы (самописная CMS). Формирование общей структуры сайта и логики навигации.
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Step 2 -->
+                            <tr class="hover:bg-[#F8F7F5] transition-colors cursor-pointer group" onclick="toggleRow('step2')">
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5 font-medium text-[#29272F] flex items-center gap-3">
+                                    <span class="w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#F8F7F5] group-hover:bg-[#E0ECD8] flex items-center justify-center transition-colors duration-300 border border-[#29272F]/5 shrink-0">
+                                        <svg id="icon-step2" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300 text-[#5F5D63] group-hover:text-[#29272F]"><path d="M6 9l6 6 6-6"/></svg>
+                                    </span>
+                                    UX-проектирование
+                                </td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5">40 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5">10 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5">8 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5 text-right whitespace-nowrap">219 000 ₽</td>
+                            </tr>
+                            <tr id="detail-step2" class="hidden detail-row">
+                                <td colspan="5" class="px-4 md:px-6 pb-6 pt-2 border-b border-[#29272F]/10 bg-white">
+                                    <div class="flex gap-4">
+                                        <div class="w-1 bg-[#E0ECD8] rounded-full shrink-0"></div>
+                                        <div class="text-[13px] md:text-[14px] text-[#5F5D63] leading-relaxed">
+                                            <strong class="text-[#29272F] font-medium">Что входит в этап:</strong> Проектирование сценариев для B2B-заказчиков и партнеров. Создание детализированных интерактивных вайрфреймов для 3 ключевых шаблонов (продуктовая страница, отрасль, семейство продуктов). Подготовка функциональных спецификаций.
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Step 3 -->
+                            <tr class="hover:bg-[#F8F7F5] transition-colors cursor-pointer group" onclick="toggleRow('step3')">
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5 font-medium text-[#29272F] flex items-center gap-3">
+                                    <span class="w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#F8F7F5] group-hover:bg-[#F8DFC5] flex items-center justify-center transition-colors duration-300 border border-[#29272F]/5 shrink-0">
+                                        <svg id="icon-step3" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300 text-[#5F5D63] group-hover:text-[#29272F]"><path d="M6 9l6 6 6-6"/></svg>
+                                    </span>
+                                    Дизайн-концепция
+                                </td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5">40 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5">24 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5">8 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5 text-right whitespace-nowrap">296 000 ₽</td>
+                            </tr>
+                            <tr id="detail-step3" class="hidden detail-row">
+                                <td colspan="5" class="px-4 md:px-6 pb-6 pt-2 border-b border-[#29272F]/10 bg-white">
+                                    <div class="flex gap-4">
+                                        <div class="w-1 bg-[#F8DFC5] rounded-full shrink-0"></div>
+                                        <div class="text-[13px] md:text-[14px] text-[#5F5D63] leading-relaxed">
+                                            <strong class="text-[#29272F] font-medium">Что входит в этап:</strong> Адаптация вашей новой айдентики под веб-интерфейс. Отрисовка Главной страницы и основного продуктового шаблона в цвете. Проработка визуальной стилистики: живые градиенты, эффекты параллакса, многослойность и 3D-рендеры машин.
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Step 4 -->
+                            <tr class="hover:bg-[#F8F7F5] transition-colors cursor-pointer group" onclick="toggleRow('step4')">
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5 font-medium text-[#29272F] flex items-center gap-3">
+                                    <span class="w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#F8F7F5] group-hover:bg-[#D9E9F7] flex items-center justify-center transition-colors duration-300 border border-[#29272F]/5 shrink-0">
+                                        <svg id="icon-step4" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300 text-[#5F5D63] group-hover:text-[#29272F]"><path d="M6 9l6 6 6-6"/></svg>
+                                    </span>
+                                    UI-дизайн (Масштабирование)
+                                </td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5">110 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5">16 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5">10 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/5 text-right whitespace-nowrap">503 000 ₽</td>
+                            </tr>
+                            <tr id="detail-step4" class="hidden detail-row">
+                                <td colspan="5" class="px-4 md:px-6 pb-6 pt-2 border-b border-[#29272F]/10 bg-white">
+                                    <div class="flex gap-4">
+                                        <div class="w-1 bg-[#D9E9F7] rounded-full shrink-0"></div>
+                                        <div class="text-[13px] md:text-[14px] text-[#5F5D63] leading-relaxed">
+                                            <strong class="text-[#29272F] font-medium">Что входит в этап:</strong> Масштабирование концепции на все 33 страницы шаблонов, уникальные разделы (Партнерам, ИИ, Полигон, Карьера с виджетом HH) и сквозные/сервисные блоки. Адаптация всех 150+ блоков под планшетные и мобильные устройства.
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Step 5 -->
+                            <tr class="hover:bg-[#F8F7F5] transition-colors cursor-pointer group" onclick="toggleRow('step5')">
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/10 font-medium text-[#29272F] flex items-center gap-3">
+                                    <span class="w-6 h-6 md:w-7 md:h-7 rounded-full bg-[#F8F7F5] group-hover:bg-[#DDD5EC] flex items-center justify-center transition-colors duration-300 border border-[#29272F]/5 shrink-0">
+                                        <svg id="icon-step5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300 text-[#5F5D63] group-hover:text-[#29272F]"><path d="M6 9l6 6 6-6"/></svg>
+                                    </span>
+                                    Передача в разработку (Handoff)
+                                </td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/10">40 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/10">4 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/10">4 ч</td>
+                                <td class="p-4 md:p-6 border-b border-[#29272F]/10 text-right whitespace-nowrap">174 000 ₽</td>
+                            </tr>
+                            <tr id="detail-step5" class="hidden detail-row">
+                                <td colspan="5" class="px-4 md:px-6 pb-6 pt-2 border-b border-[#29272F]/10 bg-white">
+                                    <div class="flex gap-4">
+                                        <div class="w-1 bg-[#DDD5EC] rounded-full shrink-0"></div>
+                                        <div class="text-[13px] md:text-[14px] text-[#5F5D63] leading-relaxed">
+                                            <strong class="text-[#29272F] font-medium">Что входит в этап:</strong> Систематизация макетов в Figma, сборка компонентного UI-кита и дизайн-токенов. Описание микроинтеракций (состояния hover, active, error). Подготовка технического гайда по реализации сложных анимаций и WebGL-эффектов для инхаус-команды.
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <!-- Subtotals & Totals -->
+                            <tr class="bg-[#F8F7F5] text-[#5F5D63]">
+                                <td class="px-4 md:px-6 py-4 border-b border-[#29272F]/10 text-right" colspan="4">Итого (без НДС)</td>
+                                <td class="px-4 md:px-6 py-4 border-b border-[#29272F]/10 text-right whitespace-nowrap">1 340 000 ₽</td>
+                            </tr>
+                            <tr class="bg-[#F8F7F5] text-[#5F5D63]">
+                                <td class="px-4 md:px-6 py-4 border-b border-[#29272F]/10 text-right" colspan="4">НДС (5%)</td>
+                                <td class="px-4 md:px-6 py-4 border-b border-[#29272F]/10 text-right whitespace-nowrap">67 000 ₽</td>
+                            </tr>
+                            <tr class="bg-gradient-to-r from-[#DDD5EC]/40 to-[#D9E9F7]/40 font-semibold text-[#29272F]">
+                                <td class="p-4 md:p-6 font-bold">ИТОГО ЧАСОВ / СУММА</td>
+                                <td class="p-4 md:p-6">246 ч</td>
+                                <td class="p-4 md:p-6">62 ч</td>
+                                <td class="p-4 md:p-6">46 ч</td>
+                                <td class="p-4 md:p-6 text-right whitespace-nowrap text-[16px] md:text-[18px]">1 407 000 ₽</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Rate card -->
+            <div>
+                <h4 class="text-[13px] md:text-[14px] text-[#5F5D63] font-medium uppercase tracking-wider mb-4">Почасовые ставки специалистов</h4>
+                <div class="flex flex-wrap gap-2 md:gap-3">
+                    <span class="inline-block bg-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[13px] md:text-[14px] border border-[#29272F]/10 text-[#29272F] hover:bg-[#F8F7F5] transition-colors cursor-default">UX/UI Дизайнер: <strong>3 500 ₽/ч</strong></span>
+                    <span class="inline-block bg-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[13px] md:text-[14px] border border-[#29272F]/10 text-[#29272F] hover:bg-[#F8F7F5] transition-colors cursor-default">Арт-директор: <strong>5 500 ₽/ч</strong></span>
+                    <span class="inline-block bg-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[13px] md:text-[14px] border border-[#29272F]/10 text-[#29272F] hover:bg-[#F8F7F5] transition-colors cursor-default">Проджект-менеджер: <strong>3 000 ₽/ч</strong></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 5. Релевантные кейсы (Cases) -->
+        <section>
+            <h2 class="manrope text-3xl md:text-4xl tracking-tight mb-8 md:mb-10">Наш опыт в похожих задачах</h2>
+            <div class="grid grid-cols-1 gap-6 md:gap-8 max-w-5xl">
+                
+                <!-- Case 1: Mindbox -->
+                <a href="https://loo.ch/cases/mindbox" target="_blank" rel="noopener noreferrer" class="group block bg-white rounded-3xl p-5 md:p-8 border border-[#29272F]/10 hover:border-[#29272F]/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex flex-col md:flex-row gap-6 md:gap-8">
+                        <div class="md:w-1/3 shrink-0">
+                            <div class="w-full aspect-auto md:aspect-square lg:aspect-[4/3] bg-[#F8F7F5] rounded-2xl overflow-hidden relative border border-[#29272F]/5">
+                                <img src="05_Mindbox.jpg" alt="Mindbox" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 flex flex-col justify-center">
+                            <h3 class="manrope text-xl md:text-2xl font-medium mb-3 group-hover:text-[#45424B] transition-colors">Редизайн сервиса Mindbox</h3>
+                            <p class="text-[#5F5D63] text-[14px] md:text-[16px] leading-relaxed mb-4">
+                                Переработали раздел продуктовых рекомендаций: вывели примеры наверх, добавили описание алгоритмов и упростили настройку категорий, избавившись от бесконечного скролла. Всё реализовали на собственной дизайн-системе.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-[12px] md:text-[13px] bg-[#F8F7F5] border border-[#29272F]/5 px-3 py-1 rounded-full text-[#29272F]">UX/UI</span>
+                                <span class="text-[12px] md:text-[13px] bg-[#F8F7F5] border border-[#29272F]/5 px-3 py-1 rounded-full text-[#29272F]">Аудит</span>
+                                <span class="text-[12px] md:text-[13px] bg-[#F8F7F5] border border-[#29272F]/5 px-3 py-1 rounded-full text-[#29272F]">Дизайн-система</span>
+                            </div>
+                            <div class="text-[13px] md:text-[14px] text-[#29272F] font-medium flex flex-wrap items-center gap-2">
+                                <span>Результат:</span>
+                                <span class="bg-[#DDD5EC]/50 px-3 py-1 rounded-lg">Использование раздела выросло в 2,5 раза</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Case 2: ОС Восход -->
+                <div class="group block bg-white rounded-3xl p-5 md:p-8 border border-[#29272F]/10 hover:border-[#29272F]/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-default">
+                    <div class="flex flex-col md:flex-row gap-6 md:gap-8">
+                        <div class="md:w-1/3 shrink-0">
+                            <div class="w-full aspect-auto md:aspect-square lg:aspect-[4/3] bg-[#F8F7F5] rounded-2xl overflow-hidden relative border border-[#29272F]/5">
+                                <img src="восход.jpg" alt="ОС Восход" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 flex flex-col justify-center">
+                            <h3 class="manrope text-xl md:text-2xl font-medium mb-3">Дизайн операционной системы Восход</h3>
+                            <p class="text-[#5F5D63] text-[14px] md:text-[16px] leading-relaxed mb-4">
+                                Спроектировали концепцию ОС для фрилансеров и удалённых команд. Построили интерфейс вокруг задач и контекстов вместо привычных меню, чтобы снизить визуальный шум. Интегрировали on-demand AI-ассистента.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-[12px] md:text-[13px] bg-[#F8F7F5] border border-[#29272F]/5 px-3 py-1 rounded-full text-[#29272F]">Проектирование</span>
+                                <span class="text-[12px] md:text-[13px] bg-[#F8F7F5] border border-[#29272F]/5 px-3 py-1 rounded-full text-[#29272F]">Концепция</span>
+                                <span class="text-[12px] md:text-[13px] bg-[#F8F7F5] border border-[#29272F]/5 px-3 py-1 rounded-full text-[#29272F]">AI</span>
+                            </div>
+                            <div class="text-[13px] md:text-[14px] text-[#29272F] font-medium flex items-center gap-2">
+                                <span>Результат:</span>
+                                <span class="bg-[#F8DFC5]/50 px-3 py-1 rounded-lg">Фокус на рабочих задачах</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-8 text-center md:text-left md:ml-4 group w-max">
+                <a href="https://loo.ch/cases" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#29272F] font-medium transition-colors border-b border-[#29272F]/20 group-hover:border-[#29272F] pb-0.5">
+                    Смотреть все кейсы
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Блок 6. Подвал (Footer CTA) -->
+        <section class="bg-white rounded-3xl p-6 md:p-16 border border-[#29272F]/10 relative overflow-hidden text-left glass-hover cursor-glow-card" data-rest-opacity="0.55" data-hover-opacity="0.95">
+            <div class="cursor-glow glow-peach w-96 h-96 opacity-55"></div>
+            <div class="glow-lavender w-80 h-80 rounded-full opacity-40 absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 pointer-events-none"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row gap-10 md:gap-12 justify-between items-start">
+                <div class="w-full md:w-7/12">
+                    <h2 class="manrope text-3xl md:text-4xl tracking-tight mb-4 md:mb-6">Что дальше?</h2>
+                    <p class="text-[15px] md:text-[16px] text-[#5F5D63] mb-6 leading-relaxed">Мы готовы к старту проекта. Чтобы двигаться дальше:</p>
+                    <ul class="text-[15px] md:text-[16px] text-[#29272F] space-y-4 mb-4 md:mb-8">
+                        <li class="flex items-start gap-3 group">
+                            <span class="text-[#DDD5EC] text-[18px] leading-none mt-0.5 group-hover:scale-125 transition-transform duration-300">●</span> 
+                            <span class="leading-relaxed">Отправьте нам реквизиты вашей компании</span>
+                        </li>
+                        <li class="flex items-start gap-3 group">
+                            <span class="text-[#E0ECD8] text-[18px] leading-none mt-0.5 group-hover:scale-125 transition-transform duration-300">●</span> 
+                            <span class="leading-relaxed">Мы оперативно подготовим договор и отправим его вам на согласование</span>
+                        </li>
+                        <li class="flex items-start gap-3 group">
+                            <span class="text-[#F8DFC5] text-[18px] leading-none mt-0.5 group-hover:scale-125 transition-transform duration-300">●</span> 
+                            <span class="leading-relaxed">Параллельно наметим и утвердим дату старта проекта</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="w-full md:w-5/12 bg-[#F8F7F5]/90 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-[#29272F]/5 shadow-[0_8px_30px_rgba(41,39,47,0.02)] hover:shadow-[0_8px_30px_rgba(41,39,47,0.05)] transition-all duration-300 hover:-translate-y-1">
+                    <div class="text-[28px] mb-4 hover:scale-110 transition-transform origin-left w-max">📬</div>
+                    <p class="text-[13px] md:text-[14px] text-[#5F5D63] mb-2 uppercase tracking-wider font-medium">Менеджер проекта</p>
+                    <h3 class="manrope text-xl md:text-2xl font-medium mb-6">Александра Баландина</h3>
+                    
+                    <div class="flex flex-col gap-4">
+                        <a href="mailto:abalandina@loo.ch" class="inline-flex items-center gap-3 text-[#29272F] hover:text-[#5F5D63] transition-colors group">
+                            <span class="bg-white p-2.5 rounded-full border border-[#29272F]/10 group-hover:border-[#29272F]/30 group-hover:bg-[#F8F7F5] transition-all duration-300 shrink-0">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7l8 5 8-5M4 7v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2z"/></svg>
+                            </span>
+                            <span class="text-[15px] md:text-[16px] border-b border-[#29272F]/20 pb-0.5 group-hover:border-[#29272F] transition-colors break-all">abalandina@loo.ch</span>
+                        </a>
+                        
+                        <a href="https://t.me/balandina_sasha" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-[#29272F] hover:text-[#5F5D63] transition-colors group">
+                            <span class="bg-white p-2.5 rounded-full border border-[#29272F]/10 group-hover:border-[#29272F]/30 group-hover:bg-[#F8F7F5] transition-all duration-300 shrink-0">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                            </span>
+                            <span class="text-[15px] md:text-[16px] border-b border-[#29272F]/20 pb-0.5 group-hover:border-[#29272F] transition-colors">@balandina_sasha</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Toggle table rows
+        function toggleRow(id) {
+            const detailRow = document.getElementById('detail-' + id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (detailRow.classList.contains('hidden')) {
+                detailRow.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                detailRow.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Smooth GPU-accelerated cursor-following highlight
+        document.querySelectorAll('.cursor-glow-card').forEach(card => {
+            const glow = card.querySelector('.cursor-glow');
+            if (!glow) return;
+
+            const restOpacity = card.dataset.restOpacity || '0.65';
+            const hoverOpacity = card.dataset.hoverOpacity || '1';
+
+            let isHovered = false;
+            let currentX = 0;
+            let currentY = 0;
+            let targetX = 0;
+            let targetY = 0;
+            let rafId = null;
+
+            function getDefaultPosition() {
+                const w = card.offsetWidth;
+                const glowW = glow.offsetWidth || 256;
+                const glowH = glow.offsetHeight || 256;
+                return {
+                    x: w - glowW * 0.65,
+                    y: -glowH * 0.25
+                };
+            }
+
+            const initPos = getDefaultPosition();
+            currentX = targetX = initPos.x;
+            currentY = targetY = initPos.y;
+            glow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+
+            function animate() {
+                const dx = targetX - currentX;
+                const dy = targetY - currentY;
+
+                if (Math.abs(dx) < 0.15 && Math.abs(dy) < 0.15) {
+                    currentX = targetX;
+                    currentY = targetY;
+                    glow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+                    rafId = null;
+                    return;
+                }
+
+                currentX += dx * 0.08;
+                currentY += dy * 0.08;
+                glow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+                rafId = requestAnimationFrame(animate);
+            }
+
+            function startAnimation() {
+                if (!rafId) {
+                    rafId = requestAnimationFrame(animate);
+                }
+            }
+
+            function updateTargetFromPointer(e) {
+                const rect = card.getBoundingClientRect();
+                targetX = e.clientX - rect.left - glow.offsetWidth / 2;
+                targetY = e.clientY - rect.top - glow.offsetHeight / 2;
+                startAnimation();
+            }
+
+            window.addEventListener('resize', () => {
+                if (!isHovered) {
+                    const pos = getDefaultPosition();
+                    targetX = pos.x;
+                    targetY = pos.y;
+                    startAnimation();
+                }
+            });
+
+            card.addEventListener('mouseenter', (e) => {
+                isHovered = true;
+                glow.style.opacity = hoverOpacity;
+                updateTargetFromPointer(e);
+            });
+
+            card.addEventListener('mousemove', updateTargetFromPointer);
+
+            card.addEventListener('mouseleave', () => {
+                isHovered = false;
+                glow.style.opacity = restOpacity;
+                const pos = getDefaultPosition();
+                targetX = pos.x;
+                targetY = pos.y;
+                startAnimation();
+            });
+        });
+    </script>
+</body>
+</html>
